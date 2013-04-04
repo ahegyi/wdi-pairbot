@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Pair Programming Bot</title>
+    <meta charset="utf-8">
+    <!-- NetDNA Hosted Bootstrap
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+    <!-- Locally Hosted Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <!-- End Bootstrap -->
+ <!--   <link href="http://pairprogrammingbot.com/stylesheets/pairing.css" media="screen" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+  </head>
+
+  <body>
+    <div class="hero-unit">
+      <h1><%= @question %></h1>
+      <div class="container-fluid">
+        <div class="row-fluid top-space">
+          <% if !!@yes_href %>
+            <div class="span6">
+              <a class="btn btn-primary btn-large btn-block" href="<%= @yes_href %>">Yes</a>
+            </div>
+            <div class="span6">
+              <a class="btn btn-large btn-block" href="<%= @no_href %>">No</a>
+            </div>
+          <% else %>
+            <div class="span12">
+              <a class="btn btn-large btn-block" href="<%= @done_href %>">Done</a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span12">
+            (<a href="/">restart</a>)
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

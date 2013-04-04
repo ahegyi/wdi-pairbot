@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <% if @done_href.nil? %>
+    <div class="span6">
+      <a class="btn btn-primary btn-large" href="<%= @yes_href %>">Yes</a>
+    </div>
+    <div class="span6">
+      <a class="btn btn-large" href="<%= @no_href %>">No</a>
+    </div>
+    <% else %>
+    else
+    <% end %>
+  </div>
+</div>
